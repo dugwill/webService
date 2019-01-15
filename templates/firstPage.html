@@ -2,10 +2,25 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>{{ .Title }}</title>
-		<link rel="stylesheet" href="styles/index.css" />
 	</head>
 	<body>
 		<h1>{{ .Header }}</h1>
 		<a href="/secondPage" target="_self">secondPage</a>
+	
+		<table style="width:50%">
+			<tr>
+				<th>Name</th>
+				<th>Type</th>
+			</tr>
+			
+			{{range .List}}
+				<tr>
+				<td>{{.Name}}</td>
+				<td>{{.Type}}</td>
+				{{end}}
+				</tr>
+
+		</table>
+	
 	</body>
 </html>
